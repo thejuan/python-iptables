@@ -15,7 +15,8 @@ from xtables import (XT_INV_PROTO, NFPROTO_IPV4, XTablesError, xtables,
 
 __all__ = ["Table", "Chain", "Rule", "Match", "Target", "Policy", "IPTCError"]
 
-load_kernel("ip_tables")
+#TODO: convert to insmod
+#load_kernel("ip_tables")
 
 _IFNAMSIZ = 16
 

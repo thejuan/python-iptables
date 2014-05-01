@@ -9,7 +9,7 @@
 
 from ip4tc import (is_table_available, Table, Chain, Rule, Match, Target,
                    Policy, IPTCError)
-from ip6tc import is_table6_available, Table6, Rule6
+#from ip6tc import is_table6_available, Table6, Rule6
 from xtables import XTablesError
 
 __all__ = []
