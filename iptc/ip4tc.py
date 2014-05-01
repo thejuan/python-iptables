@@ -20,7 +20,7 @@ __all__ = ["Table", "Chain", "Rule", "Match", "Target", "Policy", "IPTCError"]
 
 _IFNAMSIZ = 16
 
-_libc = ct.CDLL("libc.so.6")
+_libc = ct.CDLL("libc.so.0")
 _get_errno_loc = _libc.__errno_location
 _get_errno_loc.restype = ct.POINTER(ct.c_int)
 _malloc = _libc.malloc
