@@ -681,7 +681,7 @@ _lib_xtables, _xtables_version = find_library("xtables")
 
 #xtables version disdovery doesnt work in OpenWRT, for now hardcodes
 #TODO
-_xtables_version=5
+_xtables_version=10
 
 _xtables_libdir = os.getenv("XTABLES_LIBDIR")
 if _xtables_libdir is None:
