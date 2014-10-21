@@ -15,11 +15,12 @@ from .xtables import (XT_INV_PROTO, NFPROTO_IPV4, XTablesError, xtables,
 
 __all__ = ["Table", "Chain", "Rule", "Match", "Target", "Policy", "IPTCError"]
 
-load_kernel("ip_tables")
+#TODO: convert to insmod
+#load_kernel("ip_tables")
 
 _IFNAMSIZ = 16
 
-_libc = ct.CDLL("libc.so.6")
+_libc = ct.CDLL("libc.so.0")
 _get_errno_loc = _libc.__errno_location
 _get_errno_loc.restype = ct.POINTER(ct.c_int)
 _malloc = _libc.malloc

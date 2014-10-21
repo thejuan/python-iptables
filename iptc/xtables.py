@@ -678,6 +678,11 @@ _optind = ct.c_long.in_dll(_libc, "optind")
 _optarg = ct.c_char_p.in_dll(_libc, "optarg")
 
 _lib_xtables, _xtables_version = find_library("xtables")
+
+#xtables version disdovery doesnt work in OpenWRT, for now hardcodes
+#TODO
+_xtables_version=5
+
 _xtables_libdir = os.getenv("XTABLES_LIBDIR")
 if _xtables_libdir is None:
     import os.path
